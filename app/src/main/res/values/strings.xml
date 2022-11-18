@@ -1,3 +1,36 @@
 <resources>
     <string name="app_name">DemoProject2</string>
+    <string name="get_started">Get Started</string>
+    <string name="boarding_first_title">\"On the go\" CRM</string>
+    <string name="boarding_first_detail">A CRM designed for small business and sales teams for on the go use right from your mobile devices</string>
+    <string name="boarding_second_title">Separate work from home</string>
+    <string name="boarding_second_detail">Separate your client\'s contacts, calls and messages from your personal life</string>
+    <string name="boarding_third_detail">Available on Android, iOS and Web</string>
+    <string name="boarding_third_title">Multi platform support</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="scheduled_messages">Scheduled Messages</string>
+    <string name="person">Client</string>
+    <string name="organization">Organization</string>
+    <string name="conservation">Conservation</string>
+    <string name="no_result_found">No Result Found</string>
+    <string name="verify_your_mobile_number">Verify Your Mobile Number</string>
+    <string name="num_disc">We have sent a 4-digit code to your mobile number.\n enter the code below. Enter the code below.</string>
+    <string name="send_me_code_again">Send me code again</string>
+    <string name="foodie_lifestyle">Foodie_Lifestyle</string>
+    <string name="_200">200</string>
+    <string name="_300">300</string>
+    <string name="_400">400</string>
+    <string name="following">Following</string>
+    <string name="message">Message</string>
+    <string name="follow">follow</string>
+    <string name="jane_kim">Jane Kim</string>
+    <string name="profile">Just an SF Cravver eating her way through the Bay Area one dish at a time.</string>
+    <string name="link">www.cravveapp.com</string>
+    <string name="location">San Francisco</string>
+    <string name="_1_panda_bao_bun_rating_9_2">1. Panda Bao Bun</string>
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
+    <string name="rating_9_2">Rating 9.2</string>
+    <string name="_100_likes">100 Likes</string>
 </resources>

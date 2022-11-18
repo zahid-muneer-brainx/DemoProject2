@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="HardcodedText">
+    <item
+        android:id="@+id/nav_profile"
+        android:icon="@drawable/ic_stroke_169"
+        android:title="Profile" />
+
+    <item
+        android:id="@+id/nav_notification"
+        android:icon="@drawable/ic_vector_348"
+        android:title="Notification" />
+
+    <item
+        android:id="@+id/nav_saved"
+        android:icon="@drawable/ic_stroke_454"
+        android:title="Saved" />
+    <item
+        android:id="@+id/nav_location"
+        android:icon="@drawable/ic_vector__4_"
+        android:title="Location" />
+    <item
+        android:id="@+id/nav_people"
+        android:icon="@drawable/ic_ellipse_16"
+        android:title="People" />
+    <item
+        android:id="@+id/nav_dor"
+        android:icon="@drawable/ic_vector__2_"
+        android:title="Draft of Rating"
+        />
+    <item
+    android:id="@+id/nav_ifi"
+android:icon="@drawable/glyph_logo_may2016_2"
+    android:title="Import from Instagram" />
+    <item
+        android:id="@+id/nav_pro_posts"
+        android:icon="@drawable/ic_vector__3_"
+        android:title="Promoted Posts" />
+
+</menu>

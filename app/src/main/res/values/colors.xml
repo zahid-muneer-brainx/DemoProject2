@@ -5,6 +5,50 @@
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+
+    <color name="sky_blue">#2573D5</color>
+    <color name="colorPrimary">#2573D5</color>
+    <color name="colorPrimaryDark">#FFFFFF</color>
+    <color name="colorAccent">#2573D5</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="white_transparent">#F2FAFAFA</color>
+    <color name="toolbar_background">#102D4E</color>
+    <color name="gray">#8C8C8C</color>
+    <color name="grayy">#F2F4F7</color>
+    <color name="msg_header_txt_color">#A0A7B9</color>
+    <color name="gray_text_color">#5D687E</color>
+    <color name="colorRed">#DB0000</color>
+    <color name="primary_title">#29304D</color>
+    <color name="place_holder_title">#5D687E</color>
+    <color name="transparent_black">#55000000</color>
+    <color name="gray_light_text">#929498</color>
+    <color name="client_name_blue">#29304D</color>
+    <color name="header_line">#C8C7CC</color>
+
+    <color name="colorBlackish">#011123</color>
+    <color name="text_color_primary">#29304D</color>
+    <color name="text_color_accent">#2573D5</color>
+    <color name="rounded_color">#2573D5</color>
+    <color name="light_gray">#D4DAE4</color>
+    <color name="bracket_color">#F3F4F7</color>
+    <color name="background_gray">#75787766</color>
+    <color name="text_color_black_2">#303030</color>
+
+    <color name="green">#02D65D</color>
+    <color name="orange">#FF6F20</color>
+
+    <!-- dots inactive colors -->
+
+    <!-- dots active colors -->
+    <color name="profile_gradient_color">#01AEF0</color>
+
+
+    <color name="error_colot">#E91A16</color>
+
+    <color name="icActive">#FFFFFFFF</color>
+    <color name="icFocused">#DDFFFFFF</color>
+    <color name="icPressed">#AAFFFFFF</color>
+    <color name="drop_shadow">#D4DAE4</color>
+    <color name="edit_field_dash_color">#707070</color>
 </resources>
