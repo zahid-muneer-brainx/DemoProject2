@@ -13,16 +13,23 @@
         <entry key="..\:/Users/BrainX Android Dev/AndroidStudioProjects/DemoProject2/app/src/main/res/drawable/ic_line_11.xml" value="0.1955" />
         <entry key="..\:/Users/BrainX Android Dev/AndroidStudioProjects/DemoProject2/app/src/main/res/drawable/ic_rectangle_158.xml" value="0.1955" />
         <entry key="..\:/Users/BrainX Android Dev/AndroidStudioProjects/DemoProject2/app/src/main/res/drawable/ic_rectangle_1703.xml" value="0.1955" />
+        <entry key="..\:/Users/BrainX Android Dev/AndroidStudioProjects/DemoProject2/app/src/main/res/drawable/ic_rectangle_183.xml" value="0.1955" />
         <entry key="..\:/Users/BrainX Android Dev/AndroidStudioProjects/DemoProject2/app/src/main/res/drawable/item_selected.xml" value="0.1955" />
         <entry key="..\:/Users/BrainX Android Dev/AndroidStudioProjects/DemoProject2/app/src/main/res/drawable/item_unselected.xml" value="0.1955" />
+        <entry key="..\:/Users/BrainX Android Dev/AndroidStudioProjects/DemoProject2/app/src/main/res/drawable/login_btn_bg.xml" value="0.1955" />
+        <entry key="..\:/Users/BrainX Android Dev/AndroidStudioProjects/DemoProject2/app/src/main/res/drawable/login_et_bg.xml" value="0.1955" />
         <entry key="..\:/Users/BrainX Android Dev/AndroidStudioProjects/DemoProject2/app/src/main/res/drawable/rounded_background.xml" value="0.1955" />
+        <entry key="..\:/Users/BrainX Android Dev/AndroidStudioProjects/DemoProject2/app/src/main/res/layout-w1240dp/activity_login.xml" value="0.13125" />
+        <entry key="..\:/Users/BrainX Android Dev/AndroidStudioProjects/DemoProject2/app/src/main/res/layout-w936dp/activity_login.xml" value="0.1875" />
         <entry key="..\:/Users/BrainX Android Dev/AndroidStudioProjects/DemoProject2/app/src/main/res/layout/activity_home.xml" value="0.25" />
+        <entry key="..\:/Users/BrainX Android Dev/AndroidStudioProjects/DemoProject2/app/src/main/res/layout/activity_login.xml" value="0.20521590423257802" />
         <entry key="..\:/Users/BrainX Android Dev/AndroidStudioProjects/DemoProject2/app/src/main/res/layout/activity_on_board.xml" value="0.25" />
         <entry key="..\:/Users/BrainX Android Dev/AndroidStudioProjects/DemoProject2/app/src/main/res/layout/activity_on_boarding.xml" value="0.264" />
         <entry key="..\:/Users/BrainX Android Dev/AndroidStudioProjects/DemoProject2/app/src/main/res/layout/album_item_view_profile.xml" value="0.20436083796494228" />
         <entry key="..\:/Users/BrainX Android Dev/AndroidStudioProjects/DemoProject2/app/src/main/res/layout/blue_colored_dot.xml" value="0.24895833333333334" />
         <entry key="..\:/Users/BrainX Android Dev/AndroidStudioProjects/DemoProject2/app/src/main/res/layout/bottom_nav_layout.xml" value="0.24895833333333334" />
         <entry key="..\:/Users/BrainX Android Dev/AndroidStudioProjects/DemoProject2/app/src/main/res/layout/chat_fragment.xml" value="0.24895833333333334" />
+        <entry key="..\:/Users/BrainX Android Dev/AndroidStudioProjects/DemoProject2/app/src/main/res/layout/chat_item_view.xml" value="0.20436083796494228" />
         <entry key="..\:/Users/BrainX Android Dev/AndroidStudioProjects/DemoProject2/app/src/main/res/layout/digit_input.xml" value="0.24895833333333334" />
         <entry key="..\:/Users/BrainX Android Dev/AndroidStudioProjects/DemoProject2/app/src/main/res/layout/empty_item.xml" value="0.18671875" />
         <entry key="..\:/Users/BrainX Android Dev/AndroidStudioProjects/DemoProject2/app/src/main/res/layout/fragment_contact_list.xml" value="0.25" />

@@ -17,9 +17,10 @@ import com.example.demoproject2.databinding.ActivityHomeBinding
 import com.example.demoproject2.databinding.BottomNavLayoutBinding
 import com.example.demoproject2.viewModels.HomeViewModel
 import com.google.android.material.tabs.TabLayout
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.bottom_nav_layout.view.*
 
-
+@AndroidEntryPoint
 class HomeActivity : AppCompatActivity() {
     private lateinit var mainPagerAdapter: HomePageAdapter
     lateinit var binding:ActivityHomeBinding

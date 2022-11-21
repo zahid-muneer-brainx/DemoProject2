@@ -17,40 +17,27 @@ import com.example.demoproject2.models.ChatModel
 import com.example.demoproject2.viewModels.ChatViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.person_chat_fragment.*
+import javax.inject.Inject
 @AndroidEntryPoint
-class OrganizationChatFragment : Fragment() {
+class PersonChatFragment : Fragment() {
     val mViewModel: ChatViewModel by viewModels()
-    //region Properties
+
+
     lateinit var chatAdapter: ChatMessageAdapter
-    lateinit var chatBinding: PersonChatFragmentBinding
+    lateinit var chatBinding:PersonChatFragmentBinding
     companion object {
         private var tabSetViewInterface: ChatViewInterface? = null
 
-        fun newInstance(mInterface: ChatViewInterface): OrganizationChatFragment {
+        fun newInstance(mInterface: ChatViewInterface): PersonChatFragment {
             tabSetViewInterface = mInterface
-            return OrganizationChatFragment()
+            return PersonChatFragment()
         }
     }
-    //endregion
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-    }
-
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.person_chat_fragment, container, false)
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        mViewModel.chatObserver.observe(viewLifecycleOwner){
-            setChat(it)
-        }
     }
     private fun setChat(data: ArrayList<ChatModel>) {
         chatAdapter = ChatMessageAdapter(data)
@@ -58,9 +45,24 @@ class OrganizationChatFragment : Fragment() {
         chatBinding.chatRcv.layoutManager = manager
         chatBinding.chatRcv.adapter = chatAdapter
     }
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        chatBinding=PersonChatFragmentBinding.inflate(layoutInflater)
+        return chatBinding.root
+    }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        mViewModel.getChatData(1)
+        mViewModel.chatObserver.observe(viewLifecycleOwner){
+            setChat(it)
+            println(11111111111111111)
+        }
 
-
+    }
     override fun onDestroy() {
         super.onDestroy()
 
