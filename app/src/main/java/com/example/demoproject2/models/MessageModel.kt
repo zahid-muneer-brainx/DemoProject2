@@ -2,6 +2,7 @@ package com.example.demoproject2.models
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 class MessageModel(
     @SerializedName("id")
@@ -28,5 +29,5 @@ class MessageModel(
     @SerializedName("created_at")
     @Expose
     var created_at: String = "",
-) {
+):Serializable {
 }

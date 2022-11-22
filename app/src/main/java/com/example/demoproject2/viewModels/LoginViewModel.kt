@@ -22,25 +22,19 @@ class LoginViewModel @Inject constructor(
     private val dataManager: MySharedPreferences
 ) : BaseViewModel() {
 
-    var email = MutableLiveData<String>()
-    var password = MutableLiveData<String>()
+    var email = ""
+    var password = ""
     var logInObserver = MutableLiveData<Boolean>()
-    var isReadyToGo = false
-    fun onClick(view: View, viewModel: ViewModel) {
-        when (view.id) {
-            R.id.login_btn -> {
-                signInApi()
-            }
-        }
-    }
+    var errorObserver=MutableLiveData<String>()
 
     fun signInApi() {
-        if (!isValid()) return
-        showProcessingLoader()
-        isReadyToGo = false
+        if (!isValid()) {
+            return
+        }
 
-        email.value?.let { it1 ->
-            password.value?.let { it2 ->
+        showProcessingLoader()
+        email.let { it1 ->
+            password.let { it2 ->
                 viewModelScope.launch(Dispatchers.IO) {
                     authRepository.signIn(
                         it1,
@@ -53,6 +47,7 @@ class LoginViewModel @Inject constructor(
                         } else {
                             hideProcessingLoader()
                             showErrorDialog.postValue(message)
+                            errorObserver.postValue(message)
                         }
                     }
                 }
@@ -63,16 +58,16 @@ class LoginViewModel @Inject constructor(
 
     private fun isValid(): Boolean {
         return when {
-            email.value.isNullOrEmpty() -> {
-                showToast(context.getString(R.string.pleaseenteremail))
+            email.isNullOrEmpty() -> {
+                showErrorDialog.postValue(context.getString(R.string.pleaseenteremail))
                 false
             }
-            !Patterns.EMAIL_ADDRESS.matcher(email.value.toString()).matches() -> {
-                showToast(context.getString(R.string.pleaseentervailedemail))
+            !Patterns.EMAIL_ADDRESS.matcher(email).matches() -> {
+                showErrorDialog.postValue(context.getString(R.string.pleaseentervailedemail))
                 false
             }
-            password.value.isNullOrEmpty() -> {
-                showToast(context.getString(R.string.pleaseenterpassword))
+            password.isNullOrEmpty() -> {
+                showErrorDialog.postValue(context.getString(R.string.pleaseenterpassword))
                 false
             }
             else -> true

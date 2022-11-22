@@ -79,7 +79,7 @@ class ContactListFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding=FragmentContactListBinding.inflate(layoutInflater)
         return binding.root
 
@@ -107,7 +107,7 @@ class ContactListFragment : Fragment() {
     private fun setupTabLayoutWithViewPagger() {
 
         fragmentList.add(PersonChatFragment.newInstance(chatViewInterface))
-        fragmentList.add(OrganizationChatFragment.newInstance(chatViewInterface))
+        fragmentList.add(PersonChatFragment.newInstance(chatViewInterface))
 
         fragmentsTitles.add(getString(R.string.person))
         fragmentsTitles.add(getString(R.string.organization))
@@ -141,7 +141,7 @@ class ContactListFragment : Fragment() {
         view_pager.currentItem = index
         changeTabColor(sliding_tabs?.getTabAt(index)?.customView as ViewGroup?, true)
 
-        val shouldVisible = if (index == 0)
+        if (index == 0)
             clientUnreadCount != 0
         else
             organizationUnreadCount != 0

@@ -3,6 +3,8 @@ package com.example.demoproject2.activities
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.TextWatcher
+import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.lifecycle.lifecycleScope
@@ -20,18 +22,25 @@ class LoginActivity : AppCompatActivity() {
         viewBinding=ActivityLoginBinding.inflate(layoutInflater)
         setContentView(viewBinding.root)
         viewBinding.loginBtn.setOnClickListener {
-            mViewModel.email.postValue(viewBinding.userEmail.text.toString())
-            mViewModel.password.postValue(viewBinding.userPass.text.toString())
+            mViewModel.email=(viewBinding.userEmail.text.toString())
+            mViewModel.password=(viewBinding.userPass.text.toString())
             mViewModel.signInApi()
+            viewBinding.loginProgress.visibility=View.VISIBLE
         }
           mViewModel.logInObserver.observe(this){
                          if(it){
+                             Toast.makeText(this,"Success",Toast.LENGTH_SHORT).show()
                              startActivity(Intent(this@LoginActivity,HomeActivity::class.java))
+                             finish()
                          }
 
           }
         mViewModel.messageObserver.observe(this){
             Toast.makeText(this,it.toString(),Toast.LENGTH_SHORT).show()
+        }
+        mViewModel.showErrorDialog.observe(this){
+            Toast.makeText(this,it.toString(),Toast.LENGTH_SHORT).show()
+            viewBinding.loginProgress.visibility=View.GONE
         }
     }
 }

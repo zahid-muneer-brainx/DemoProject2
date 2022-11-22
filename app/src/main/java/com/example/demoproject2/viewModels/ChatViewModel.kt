@@ -8,6 +8,7 @@ import androidx.lifecycle.viewModelScope
 import com.example.demoproject2.R
 import com.example.demoproject2.SharedPreferences.MySharedPreferences
 import com.example.demoproject2.models.ChatModel
+import com.example.demoproject2.models.MetaData
 import com.example.demoproject2.repositories.AuthRepository
 import com.google.firebase.installations.FirebaseInstallations
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -21,6 +22,7 @@ class ChatViewModel @Inject constructor(
     @ApplicationContext val context: Context,
 ) : BaseViewModel() {
     var chatObserver = MutableLiveData<ArrayList<ChatModel>>()
+    var metaData=MutableLiveData<MetaData>()
     fun getChatData(page: Int) {
         viewModelScope.launch(Dispatchers.IO)
         {
@@ -28,7 +30,10 @@ class ChatViewModel @Inject constructor(
             { data, message, status
                 ->
                 if (status) {
-                    chatObserver.postValue(data)
+                    if (data != null) {
+                        chatObserver.postValue(data.chatModel)
+                        metaData.postValue(data.metaData)
+                    }
                 } else {
                     hideProcessingLoader()
                     showErrorDialog.postValue(message)

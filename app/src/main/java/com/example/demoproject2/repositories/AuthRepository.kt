@@ -2,6 +2,7 @@ package com.example.demoproject2.repositories
 
 import com.example.demoproject2.SharedPreferences.MySharedPreferences
 import com.example.demoproject2.models.ChatModel
+import com.example.demoproject2.models.ChatResponseModel
 import com.example.demoproject2.models.UserModel
 import com.example.demoproject2.network.APICall
 import com.example.demoproject2.network.ClientDexApiClient
@@ -74,7 +75,7 @@ class AuthRepository @Inject constructor(
     }
     suspend fun getChatList(
         page:Int,
-        response: (ArrayList<ChatModel>?,String?,Boolean) -> Unit
+        response: (ChatResponseModel?,String?,Boolean) -> Unit
     ) {
         val apiResponse = APICall.call {
             clientDexApiClient.GetChatList(page)

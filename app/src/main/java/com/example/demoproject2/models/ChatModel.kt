@@ -2,6 +2,7 @@ package com.example.demoproject2.models
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 data class ChatModel(
     @SerializedName("id")
@@ -18,6 +19,6 @@ data class ChatModel(
     var last_message: MessageModel,
     @SerializedName("client")
     @Expose
-    var client: ClientModel?=null
-) {
+    var client: ClientModel?
+):Serializable {
 }

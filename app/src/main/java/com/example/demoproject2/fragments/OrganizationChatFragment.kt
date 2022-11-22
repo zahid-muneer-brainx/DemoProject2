@@ -42,8 +42,9 @@ class OrganizationChatFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.person_chat_fragment, container, false)
+    ): View {
+        chatBinding=PersonChatFragmentBinding.inflate(layoutInflater)
+        return chatBinding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

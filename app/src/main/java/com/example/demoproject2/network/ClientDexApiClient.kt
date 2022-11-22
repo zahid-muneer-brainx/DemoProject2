@@ -1,6 +1,7 @@
 package com.example.demoproject2.network
 
 import com.example.demoproject2.models.ChatModel
+import com.example.demoproject2.models.ChatResponseModel
 import com.example.demoproject2.models.UserModel
 import com.google.gson.JsonObject
 import retrofit2.Response
@@ -13,7 +14,7 @@ interface ClientDexApiClient {
     @GET("/api/v1/client/chats.json")
     suspend fun GetChatList(
         @Query("current_page") pageIndex: Int
-    ): Response<ArrayList<ChatModel>>
+    ): Response<ChatResponseModel>
 
 
 }

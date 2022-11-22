@@ -34,6 +34,8 @@ class PersonChatFragment : Fragment() {
         }
     }
 
+    private var currentPage = 1
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,24 +51,18 @@ class PersonChatFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         chatBinding=PersonChatFragmentBinding.inflate(layoutInflater)
         return chatBinding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        mViewModel.getChatData(1)
+        mViewModel.getChatData(currentPage)
         mViewModel.chatObserver.observe(viewLifecycleOwner){
             setChat(it)
-            println(11111111111111111)
         }
 
     }
-    override fun onDestroy() {
-        super.onDestroy()
-
-    }
-
 
 }
