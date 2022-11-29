@@ -18,7 +18,7 @@ class SearchFragment : Fragment() {
         val args = Bundle()
         args.putBoolean("SEARCH", fromMessages)
         val f = SearchFragment()
-        f.setArguments(args)
+        f.arguments = args
         return f
     }
 

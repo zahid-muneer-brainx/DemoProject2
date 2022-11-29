@@ -75,16 +75,6 @@ class HomeActivity : AppCompatActivity() {
     }
     private fun changeTabIconAndTextColor(customView: View?, isSelected: Boolean, position: Int) {
 
-//        val iconColor = if (isSelected) R.color.white_transparent else R.color.transparent_black
-//        customView?.apply {
-//
-//            item_icon.colorFilter =
-//                getFilterColor(
-//                    this.context,
-//                    iconColor
-//                )
-//
-//        }
 
     }
     private val pagerTabListener = object : TabLayout.OnTabSelectedListener {
@@ -103,12 +93,5 @@ class HomeActivity : AppCompatActivity() {
 
         override fun onTabReselected(tab: TabLayout.Tab) = Unit
     }
-    fun getFilterColor(context: Context, colorId: Int): ColorFilter {
-        return PorterDuffColorFilter(
-            ContextCompat.getColor(
-                context,
-                colorId
-            ), PorterDuff.Mode.SRC_ATOP
-        )
-    }
+
 }

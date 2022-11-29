@@ -8,24 +8,14 @@ import android.view.ViewGroup
 import com.example.demoproject2.R
 import android.widget.FrameLayout
 import android.widget.TextView
-import androidx.activity.viewModels
 import androidx.core.content.ContextCompat
-import androidx.fragment.app.viewModels
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.demoproject2.adapters.ChatMessageAdapter
 import com.example.demoproject2.adapters.ChatPageAdapter
-import com.example.demoproject2.adapters.TagRecyclerViewAdapter
 import com.example.demoproject2.databinding.FragmentContactListBinding
-import com.example.demoproject2.databinding.FragmentProfileBinding
 import com.example.demoproject2.interfaces.ChatViewInterface
-import com.example.demoproject2.models.ChatModel
-import com.example.demoproject2.viewModels.ChatViewModel
-import com.example.demoproject2.viewModels.LoginViewModel
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
-import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_contact_list.*
-import kotlinx.android.synthetic.main.person_chat_fragment.*
+
 
 
 class ContactListFragment : Fragment() {

@@ -53,4 +53,12 @@
     <string name="error_random">Some error occoured, Please try again</string>
     <string name="contact_name">Contact Name</string>
     <string name="last_message">Last Message</string>
+    <string name="logo">Logo</string>
+    <string name="dp">DP</string>
+    <string name="_2_hour_ago">2 hours ago</string>
+    <string name="z">Z</string>
+    <string name="create_client_profile">Create a Client Profile</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+    <string name="are_you_sure_delete">Are you sure you want to delete</string>
 </resources>

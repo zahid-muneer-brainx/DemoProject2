@@ -8,6 +8,7 @@ import androidx.lifecycle.ViewModel
 open class BaseViewModel : ViewModel() {
 
     //region properties
+    var isLoading = MutableLiveData<Boolean>()
     val loadingObserver = MutableLiveData<Boolean>()
     val messageObserver = MutableLiveData<Any?>()
     var showErrorDialog = MutableLiveData<String>()

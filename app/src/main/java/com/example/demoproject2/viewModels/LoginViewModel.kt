@@ -4,12 +4,10 @@ import android.content.Context
 import android.util.Patterns
 import android.view.View
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.demoproject2.R
 import com.example.demoproject2.SharedPreferences.MySharedPreferences
 import com.example.demoproject2.repositories.AuthRepository
-import com.google.firebase.installations.FirebaseInstallations
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Dispatchers
@@ -22,19 +20,22 @@ class LoginViewModel @Inject constructor(
     private val dataManager: MySharedPreferences
 ) : BaseViewModel() {
 
-    var email = ""
-    var password = ""
+    var email=MutableLiveData<String>()
+    var password =MutableLiveData<String>()
     var logInObserver = MutableLiveData<Boolean>()
     var errorObserver=MutableLiveData<String>()
-
+    fun onClick(view: View)
+    {
+        signInApi()
+    }
     fun signInApi() {
         if (!isValid()) {
             return
         }
 
-        showProcessingLoader()
-        email.let { it1 ->
-            password.let { it2 ->
+        isLoading.postValue(true)
+        email.value?.let { it1 ->
+            password.value?.let { it2 ->
                 viewModelScope.launch(Dispatchers.IO) {
                     authRepository.signIn(
                         it1,
@@ -44,9 +45,9 @@ class LoginViewModel @Inject constructor(
                         dataManager.notFirstTimeLogin = data?.first_login ?: true
                         if (status) {
                             logInObserver.postValue(status)
+                            isLoading.postValue(false)
                         } else {
-                            hideProcessingLoader()
-                            showErrorDialog.postValue(message)
+                            isLoading.postValue(false)
                             errorObserver.postValue(message)
                         }
                     }
@@ -58,15 +59,15 @@ class LoginViewModel @Inject constructor(
 
     private fun isValid(): Boolean {
         return when {
-            email.isNullOrEmpty() -> {
+            email.value.isNullOrEmpty() -> {
                 showErrorDialog.postValue(context.getString(R.string.pleaseenteremail))
                 false
             }
-            !Patterns.EMAIL_ADDRESS.matcher(email).matches() -> {
+            !Patterns.EMAIL_ADDRESS.matcher(email.value.toString()).matches() -> {
                 showErrorDialog.postValue(context.getString(R.string.pleaseentervailedemail))
                 false
             }
-            password.isNullOrEmpty() -> {
+            password.value.isNullOrEmpty() -> {
                 showErrorDialog.postValue(context.getString(R.string.pleaseenterpassword))
                 false
             }

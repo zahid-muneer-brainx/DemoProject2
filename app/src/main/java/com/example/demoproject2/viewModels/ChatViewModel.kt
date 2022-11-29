@@ -32,6 +32,7 @@ class ChatViewModel @Inject constructor(
                 if (status) {
                     if (data != null) {
                         chatObserver.postValue(data.chatModel)
+                        println(data.chatModel.toString())
                         metaData.postValue(data.metaData)
                     }
                 } else {
